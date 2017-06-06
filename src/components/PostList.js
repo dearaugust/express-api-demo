@@ -1,35 +1,27 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
+const styles = {
+     button: {
+       display: 'block',
+       margin: '30px auto',
+       width: '120px',
+       height: '36px',
+       lineHeight: '36px',
+       textAlign: 'center',
+       backgroundColor: '#ff4081',
+       fontSize: '1em',
+       color: '#fff',
+       textDecoration: 'none',
+       borderRadius: '20px'
+     }
+ }
 class PostList extends Component {
-  handleSubmit(e){
-    e.preventDefault()
-    // let value = this.input.value
-  }
   render(){
     return(
-      <div className="form" style={{marginTop:'20px'}}>
-        <div style={{textAlign:'center',fontSize:'1.2rem',paddingTop:'20px'}}>写文章</div>
-        <form type="submit" onSubmit={this.handleSubmit.bind(this)}>
-          <div>
-            <label>分类：
-              <input type="text" ref={value=> this.value = value} />
-            </label>
-          </div>
-          <div>
-            <label>标题：
-              <input type="text" />
-            </label>
-          </div>
-          <div>
-            <label>内容：
-              <textarea style={{height:'100%'}}></textarea>
-            </label>
-          </div>
-          <div style={{textAlign:'center'}}>
-            <button type="submit">提交</button>
-            <a href="#">取消</a>
-          </div>
-        </form>
+      <div>
+        <Link style={styles.button} to='/post/new'>写文章</Link>
+        PostList
       </div>
     )
   }

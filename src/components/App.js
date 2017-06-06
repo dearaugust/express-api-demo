@@ -3,7 +3,7 @@ import '../css/App.css';
 import Header from './Header'
 import PostList from './PostList'
 import NewPost from './NewPost'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // import axios from 'axios'
 
